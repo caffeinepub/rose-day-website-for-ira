@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no functionality.",
+  "feature_evidence.json": "Feature evidence file describing two frontend feature requirements and their associated files.",
+  "frontend-file-summaries.txt": "Text file containing short descriptions of various frontend components and utilities.",
+  "frontend/index.css": "Global Tailwind CSS setup defining color variables, themes, and base styles.",
+  "frontend/index.html": "HTML entry point providing metadata and mounting the React app.",
+  "frontend/src/App.tsx": "Root React component that renders the RoseDayPage.",
+  "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx": "Modal component showing decorated personal note content triggered by a button.",
+  "frontend/src/components/rose-day/RevealNote.tsx": "Accordion component that toggles visibility of note content.",
+  "frontend/src/components/rose-day/SectionNav.tsx": "Sticky navigation bar enabling smooth scrolling between page sections.",
+  "frontend/src/content/roseDayContent.ts": "Defines content variants including hero, note, reasons, closing, and popup text.",
+  "frontend/src/hooks/useActor.ts": "Hook creating an authenticated or anonymous backend actor and managing query updates.",
+  "frontend/src/hooks/useContentVariant.ts": "Hook selecting content variant based on URL query parameters.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for Internet Identity authentication, exposing identity, login, logout, and status handling. Manages AuthClient creation, loading stored identities, and login state.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "React hook that returns whether the user prefers reduced motion using a media query listener.",
+  "frontend/src/hooks/useScrollFadeIn.ts": "Hook that uses IntersectionObserver to reveal elements with a fade-in effect, with instant visibility when reduced motion is preferred.",
+  "frontend/src/index.css": "Global Tailwind-based styles defining color variables, dark mode values, typography, scroll behavior, reduced motion rules, and custom scrollbar styling.",
+  "frontend/src/main.tsx": "App entry point that initializes React, wraps the app with QueryClientProvider and InternetIdentityProvider, and loads global styles.",
+  "frontend/src/pages/RoseDayPage.tsx": "Page component rendering the Rose Day experience with fade-in sections, themed images, hero text, navigation, and personalized romantic content.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme colors from CSS variables, adding plugins, custom fonts, animations, and container settings.",
+  "project_state.json": "Metadata describing the project’s purpose, features, requirements, and current state for building a personalized Rose Day gift website."
+}

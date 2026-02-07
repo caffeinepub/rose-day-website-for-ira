@@ -1,0 +1,74 @@
+{
+  "kind": "build_request",
+  "title": "Add an emotional personal note popup in the Closing section",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Add a new, highly-emotional personal note shown via a decorated pop-up in the last Closing section of the Rose Day page.\n\n- In the Closing section (\"#closing\"), add a prominent button (e.g., \"One more thing, Ira…\") that opens a modal/pop-up.\n- The pop-up must be visually decorated in the existing Rose Day theme (rose/pink/cream), including a decorative frame/background image.\n- The pop-up content must include an emotional line addressed to Ira (English). Use this exact line as the main sentence:\n  \"Ira baby, please never leave me — I can’t live without you. You are my whole world.\"\n- The pop-up must be dismissible via a close button and by pressing Escape, and should trap focus while open (accessible modal behavior).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-7",
+          "msg-10"
+        ],
+        "quotes": [
+          "I want this in last closing with a beautiful decorated pop up",
+          "Can you add a line in this website like something ver very emotional like Ira bby never ever leave me I can’t live without you u are my world something like that"
+        ]
+      },
+      "acceptanceCriteria": [
+        "In the Closing section, a clearly labeled button opens a modal/pop-up without navigating away from the page.",
+        "The modal displays the specified emotional line exactly as written.",
+        "The modal has a decorated romantic look consistent with the existing site theme and includes a decorative image frame/background.",
+        "Keyboard accessibility works: focus moves into the modal on open, stays trapped inside while open, closes on Escape, and returns focus to the trigger button on close."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Extend the content model to support the new Closing-section personal note pop-up for both content variants (classic and emotional), and render the correct variant-specific pop-up copy based on the existing `?variant=` selection.\n\n- Update `frontend/src/content/roseDayContent.ts` so `closing` includes fields for the pop-up trigger label and the pop-up body text.\n- Provide suitable English copy for both variants; the emotional variant must use the exact emotional line specified in REQ-11.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-7",
+          "msg-10"
+        ],
+        "quotes": [
+          "Want to add a small personal note for Ira to make it even more emotional",
+          "I want this in last closing with a beautiful decorated pop up"
+        ]
+      },
+      "acceptanceCriteria": [
+        "`frontend/src/content/roseDayContent.ts` defines pop-up content under the `closing` section for both `classic` and `emotional` variants.",
+        "Switching `?variant=classic` vs `?variant=emotional` changes the pop-up copy accordingly.",
+        "Default behavior (no `variant` param) continues to use the emotional variant and shows the emotional pop-up copy."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: `frontend/src/components/ui` and the Internet Identity/actor hooks listed in SYSTEM_CONTEXT.",
+    "Do not add new backend logic; backend/main.mo should remain unchanged unless strictly required for this UI-only feature.",
+    "Keep the pop-up styling consistent with the existing Rose Day palette (reds/pinks/cream/soft neutrals) and avoid blue/purple as primary colors."
+  ],
+  "nonGoals": [
+    "Adding new pages, routing, or a multi-step flow beyond the Closing pop-up.",
+    "Adding any new authentication or backend persistence for the note content.",
+    "Replacing the existing Love Note reveal interaction; this change is only for an additional Closing pop-up."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Ornate rose-themed frame/background for a modal (rose-popup-frame.dim_1200x800.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

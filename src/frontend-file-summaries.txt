@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main app component that renders the RoseDayPage as the single-page application.",
+  "frontend/src/content/roseDayContent.ts": "Centralized content store with two variants (classic and emotional) containing personalized messages from Toshif to Ira, now including popup trigger label and content fields in the closing section for both variants.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "Custom hook that detects user's reduced motion preference for accessibility.",
+  "frontend/src/hooks/useScrollFadeIn.ts": "Custom hook using IntersectionObserver to trigger fade-in animations when elements enter viewport, respecting reduced motion preferences.",
+  "frontend/src/components/rose-day/RevealNote.tsx": "Interactive accordion-style component with expand/collapse functionality for the love letter section.",
+  "frontend/src/components/rose-day/SectionNav.tsx": "Sticky navigation bar with smooth scroll-to-section functionality and active state tracking.",
+  "frontend/src/pages/RoseDayPage.tsx": "Main page component that dynamically renders content based on the selected variant, displaying hero section, love note, reasons list, and closing message with scroll animations, responsive layout, and now includes the personal note modal trigger in the closing section.",
+  "frontend/src/index.css": "Global styles with custom OKLCH-based Rose Day color palette (reds/pinks/cream), dark mode support, smooth scrolling, and accessibility features.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom rose/cream/pink color tokens, serif font family, and design system tokens.",
+  "frontend/index.html": "HTML entry point with updated title and meta description specifically for Ira from Toshif, reflecting the emotional Rose Day surprise theme.",
+  "frontend/src/hooks/useContentVariant.ts": "Custom hook that reads the variant query parameter from the URL and returns the appropriate content variant, defaulting to emotional when no parameter is provided.",
+  "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx": "Accessible modal component using shadcn Dialog that displays an emotional personal note with decorative rose frame background, animated hearts, and proper keyboard navigation support."
+}

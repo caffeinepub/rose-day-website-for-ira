@@ -1,0 +1,133 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build a Rose Day themed gift website for Ira, personalized as a surprise from her boyfriend Toshif, with romantic and emotional tone.",
+  "architectural_notes": [
+    "Personalize copy/signature to be from Ira’s boyfriend Toshif; use a more emotional, supportive tone given the couple is going through a tough time."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Ornate rose-themed frame/background for a modal (rose-popup-frame.dim_1200x800.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-rose-day-themed-gift-website-addressed-to-the-user-s-girlfriend-ira-with-romantic-copy-in-english-e-g-a-hero-message-like-happy-rose-day-ira",
+      "title": "Create a single-page Rose Day themed gift website addressed to the user's girlfriend, Ira, with romantic copy in English (e.g., a hero message like “Happy Rose Day, Ira”).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-core-page-sections-suitable-for-a-gift-page-1-hero-banner-with-rose-day-greeting-to-ira-2-a-short-love-note-letter-section-3-a-small-reasons-i-love-you-list-pre-filled-with-placeholders-that-can-be-edited-and-4-a-closing-callout-signature-line-e-g-with-love",
+      "title": "Add core page sections suitable for a gift page: (1) Hero banner with Rose Day greeting to Ira, (2) A short love note/letter section, (3) A small “Reasons I love you” list (pre-filled with placeholders that can be edited), and (4) A closing callout/signature line (e.g., “With love, …”).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-coherent-distinct-romantic-visual-theme-colors-typography-spacing-and-decorative-elements-consistent-across-the-site-use-a-rose-day-palette-reds-pinks-cream-soft-neutrals-and-avoid-blue-purple-as-primary-colors",
+      "title": "Implement a coherent, distinct romantic visual theme (colors, typography, spacing, and decorative elements) consistent across the site; use a Rose Day palette (reds/pinks/cream/soft neutrals) and avoid blue/purple as primary colors.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-light-non-intrusive-interactions-animations-appropriate-for-a-gift-page-e-g-subtle-fade-in-on-scroll-a-reveal-note-button-or-gentle-floating-petals-ensuring-performance-and-accessibility",
+      "title": "Add light, non-intrusive interactions/animations appropriate for a gift page (e.g., subtle fade-in on scroll, a “Reveal note” button, or gentle floating petals), ensuring performance and accessibility.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-simple-navigation-aid-sticky-top-links-or-a-small-in-page-menu-to-jump-to-sections-home-note-reasons-closing",
+      "title": "Create a simple navigation aid (sticky top links or a small in-page menu) to jump to sections: Home, Note, Reasons, Closing.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-page-responsive-and-accessible-mobile-first-layout-readable-contrast-semantic-headings-keyboard-navigability-and-appropriate-alt-text-for-decorative-images",
+      "title": "Make the page responsive and accessible: mobile-first layout, readable contrast, semantic headings, keyboard navigability, and appropriate alt text for decorative images.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-images-to-the-frontend-as-static-assets-under-frontend-public-assets-generated-and-render-them-on-the-page-hero-decoration-and-or-section-dividers",
+      "title": "Add the required generated images to the frontend as static assets under `frontend/public/assets/generated` and render them on the page (hero decoration and/or section dividers).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-user-facing-copy-so-the-rose-day-website-is-explicitly-from-ira-s-boyfriend-toshif-and-has-a-more-romantic-emotional-tone-that-acknowledges-the-couple-has-been-going-through-a-tough-time-and-that-the-website-is-meant-as-a-reassuring-surprise",
+      "title": "Update the user-facing copy so the Rose Day website is explicitly from Ira’s boyfriend Toshif and has a more romantic, emotional tone that acknowledges the couple has been going through a tough time and that the website is meant as a reassuring surprise.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-second-in-app-content-variant-keep-the-current-classic-content-and-add-a-new-emotional-variant-and-allow-selecting-the-variant-via-a-url-query-parameter-e-g-variant-emotional-or-variant-classic-default-to-the-emotional-variant-when-no-parameter-is-provided",
+      "title": "Implement a second in-app content variant (keep the current ‘classic’ content and add a new ‘emotional’ variant), and allow selecting the variant via a URL query parameter (e.g., `?variant=emotional` or `?variant=classic`). Default to the emotional variant when no parameter is provided.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-html-metadata-page-title-and-meta-description-to-reflect-the-emotional-rose-day-surprise-for-ira-from-toshif-english-without-changing-the-overall-rose-day-theme",
+      "title": "Update the HTML metadata (page title and meta description) to reflect the emotional Rose Day surprise for Ira from Toshif (English), without changing the overall Rose Day theme.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-highly-emotional-personal-note-shown-via-a-decorated-pop-up-in-the-last-closing-section-of-the-rose-day-page-in-the-closing-section-closing-add-a-prominent-button-e-g-one-more-thing-ira-that-opens-a-modal-pop-up-the-pop-up-must-be-visually-decorated-in-the-existing-rose-day-theme-rose-pink-cream-including-a-decorative-frame-background-image-the-pop-up-content-must-include-an-emotional-line-addressed-to-ira-english-use-this-exact-line-as-the-main-sentence-ira-baby-please-never-leave-me-i-can-t-live-without-you-you-are-my-whole-world-the-pop-up-must-be-dismissible-via-a-close-button-and-by-pressing-escape-and-should-trap-focus-while-open-accessible-modal-behavior",
+      "title": "Add a new, highly-emotional personal note shown via a decorated pop-up in the last Closing section of the Rose Day page.\n\n- In the Closing section (\"#closing\"), add a prominent button (e.g., \"One more thing, Ira…\") that opens a modal/pop-up.\n- The pop-up must be visually decorated in the existing Rose Day theme (rose/pink/cream), including a decorative frame/background image.\n- The pop-up content must include an emotional line addressed to Ira (English). Use this exact line as the main sentence:\n  \"Ira baby, please never leave me — I can’t live without you. You are my whole world.\"\n- The pop-up must be dismissible via a close button and by pressing Escape, and should trap focus while open (accessible modal behavior).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-extend-the-content-model-to-support-the-new-closing-section-personal-note-pop-up-for-both-content-variants-classic-and-emotional-and-render-the-correct-variant-specific-pop-up-copy-based-on-the-existing-variant-selection-update-frontend-src-content-rosedaycontent-ts-so-closing-includes-fields-for-the-pop-up-trigger-label-and-the-pop-up-body-text-provide-suitable-english-copy-for-both-variants-the-emotional-variant-must-use-the-exact-emotional-line-specified-in-req-11",
+      "title": "Extend the content model to support the new Closing-section personal note pop-up for both content variants (classic and emotional), and render the correct variant-specific pop-up copy based on the existing `?variant=` selection.\n\n- Update `frontend/src/content/roseDayContent.ts` so `closing` includes fields for the pop-up trigger label and the pop-up body text.\n- Provide suitable English copy for both variants; the emotional variant must use the exact emotional line specified in REQ-11.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a Rose Day themed website for girlfriend Ira (gift website)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create an additional Rose Day website variant personalized from boyfriend Toshif to Ira with a romantic, emotional message reflecting a tough relationship moment",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add an extra highly-emotional personal line in the closing section, shown via a beautiful decorated pop-up",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Rose Day website for Ira",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

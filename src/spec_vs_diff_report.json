@@ -1,0 +1,58 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-06T16:35:04.238Z",
+  "summary": "Implemented a new Closing-section modal component with rose-themed styling and a decorative background image, and extended the content model to include per-variant popup copy. However, the diff summary does not provide sufficient evidence that the exact required emotional line is used, that the modal is actually wired into the Closing section, or that the required accessible modal behaviors (Escape-to-close, focus trap, focus return) are explicitly satisfied.",
+  "missing_requirements": [
+    {
+      "id": "REQ-11",
+      "requirement": "In the Closing section (\"#closing\"), add a prominent button that opens the personal note modal/pop-up without navigating away from the page.",
+      "reason": "The diff summary for `frontend/src/pages/RoseDayPage.tsx` is truncated before the Closing section, so there’s no direct evidence the trigger button is rendered specifically inside `#closing` and wired to open the modal there.",
+      "evidence": [
+        "frontend/src/pages/RoseDayPage.tsx (truncated)",
+        "frontend-file-summaries.txt (claims modal trigger added, but no code excerpt)"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "The pop-up content must include the exact emotional line: \"Ira baby, please never leave me — I can’t live without you. You are my whole world.\"",
+      "reason": "`roseDayContent.ts` is truncated before showing the emotional variant’s `closing.popup.content`, so the diff summary does not confirm the exact line appears anywhere (and the modal wraps content in quotes, which could also affect “exactly as written” if the stored content includes/doesn’t include quotes).",
+      "evidence": [
+        "frontend/src/content/roseDayContent.ts (truncated)",
+        "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx (renders content as '\"{content}\"')"
+      ]
+    },
+    {
+      "id": "REQ-11",
+      "requirement": "Accessible modal behavior: dismissible via a close button and by pressing Escape; traps focus while open; returns focus to the trigger button on close.",
+      "reason": "The new component uses `Dialog` from `@/components/ui/dialog`, but the diff summary does not show any explicit configuration/handlers confirming Escape handling, focus trapping, and focus return behavior (nor any explicit close button markup in this component). Without seeing the underlying `Dialog` implementation (in an immutable path), this cannot be verified from the provided diff summary alone.",
+      "evidence": [
+        "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added extra modal copy and elements not requested (title \"From the Depths of My Heart\", decorative animated hearts/sparkles, and a sign-off \"Forever and always, Toshif\").",
+      "reason": "REQ-11/REQ-12 only request the trigger label and the popup body text (with exact emotional line for emotional variant) plus themed decoration; they do not request additional heading/signature content inside the modal.",
+      "evidence": [
+        "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx"
+      ]
+    },
+    {
+      "description": "Modal displays the provided content wrapped in quotation marks.",
+      "reason": "REQ-11 requires displaying the specified emotional line exactly as written; wrapping the content in additional quotes is an unrequested formatting change and may break strict “exact text” expectations depending on how content is stored.",
+      "evidence": [
+        "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.64,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx",
+    "frontend/src/content/roseDayContent.ts",
+    "frontend/src/pages/RoseDayPage.tsx",
+    "project_state.json"
+  ]
+}

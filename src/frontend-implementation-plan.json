@@ -1,0 +1,55 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Rose Day Closing Personal Note Modal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Add a prominent button in the Closing section that opens a decorated, accessible modal with an emotional personal note for Ira.",
+      "acceptanceCriteria": [
+        "In the Closing section, a clearly labeled button opens a modal/pop-up without navigating away from the page.",
+        "The modal displays the specified emotional line exactly as written.",
+        "The modal has a decorated romantic look consistent with the existing site theme and includes a decorative image frame/background.",
+        "Keyboard accessibility works: focus moves into the modal on open, stays trapped inside while open, closes on Escape, and returns focus to the trigger button on close."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/rose-popup-frame.dim_1200x800.png",
+          "operation": "create",
+          "description": "Add the generated ornate rose-themed frame/background image asset for the modal: frontend/public/assets/generated/rose-popup-frame.dim_1200x800.png."
+        },
+        {
+          "path": "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx",
+          "operation": "create",
+          "description": "Create a Closing-section modal component that uses the shadcn-ui Dialog component to provide accessible modal behavior (focus trap, Escape to close, close button) and returns focus to the trigger on close; visually decorate the modal using the Rose Day palette and the frame/background image frontend/public/assets/generated/rose-popup-frame.dim_1200x800.png. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/RoseDayPage.tsx",
+          "operation": "modify",
+          "description": "In the Closing section (#closing), add a prominent trigger button (label sourced from content model) and wire it to open/close the new ClosingPersonalNoteModal; pass in the variant-specific modal copy and ensure the modal renders within the existing Closing section without adding new pages/routes. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Extend the Rose Day content model so the Closing section defines variant-specific modal trigger label and modal body text, keyed off the existing ?variant= selection.",
+      "acceptanceCriteria": [
+        "`frontend/src/content/roseDayContent.ts` defines pop-up content under the `closing` section for both `classic` and `emotional` variants.",
+        "Switching `?variant=classic` vs `?variant=emotional` changes the pop-up copy accordingly.",
+        "Default behavior (no `variant` param) continues to use the emotional variant and shows the emotional pop-up copy."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/content/roseDayContent.ts",
+          "operation": "modify",
+          "description": "Update the ContentVariant type so `closing` includes fields for the pop-up trigger label and pop-up body text; populate both classic and emotional variants with suitable English copy, ensuring the emotional variant body text uses exactly: \"Ira baby, please never leave me — I can’t live without you. You are my whole world.\"."
+        },
+        {
+          "path": "frontend/src/pages/RoseDayPage.tsx",
+          "operation": "modify",
+          "description": "Update Closing section rendering to read the new closing pop-up fields from the selected content variant (from useContentVariant) and pass them into ClosingPersonalNoteModal, so ?variant=classic vs ?variant=emotional changes the button label/copy accordingly (default remains emotional)."
+        }
+      ]
+    }
+  ]
+}

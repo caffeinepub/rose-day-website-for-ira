@@ -1,0 +1,43 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-new-highly-emotional-personal-note-shown-via-a-decorated-pop-up-in-the-last-closing-section-of-the-rose-day-page-in-the-closing-section-closing-add-a-prominent-button-e-g-one-more-thing-ira-that-opens-a-modal-pop-up-the-pop-up-must-be-visually-decorated-in-the-existing-rose-day-theme-rose-pink-cream-including-a-decorative-frame-background-image-the-pop-up-content-must-include-an-emotional-line-addressed-to-ira-english-use-this-exact-line-as-the-main-sentence-ira-baby-please-never-leave-me-i-can-t-live-without-you-you-are-my-whole-world-the-pop-up-must-be-dismissible-via-a-close-button-and-by-pressing-escape-and-should-trap-focus-while-open-accessible-modal-behavior",
+      "featureTitle": "Add a new, highly-emotional personal note shown via a decorated pop-up in the last Closing section of the Rose Day page.\n\n- In the Closing section (\"#closing\"), add a prominent button (e.g., \"One more thing, Ira…\") that opens a modal/pop-up.\n- The pop-up must be visually decorated in the existing Rose Day theme (rose/pink/cream), including a decorative frame/background image.\n- The pop-up content must include an emotional line addressed to Ira (English). Use this exact line as the main sentence:\n  \"Ira baby, please never leave me — I can’t live without you. You are my whole world.\"\n- The pop-up must be dismissible via a close button and by pressing Escape, and should trap focus while open (accessible modal behavior).",
+      "files": [
+        "frontend/src/components/rose-day/ClosingPersonalNoteModal.tsx",
+        "frontend/src/pages/RoseDayPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-extend-the-content-model-to-support-the-new-closing-section-personal-note-pop-up-for-both-content-variants-classic-and-emotional-and-render-the-correct-variant-specific-pop-up-copy-based-on-the-existing-variant-selection-update-frontend-src-content-rosedaycontent-ts-so-closing-includes-fields-for-the-pop-up-trigger-label-and-the-pop-up-body-text-provide-suitable-english-copy-for-both-variants-the-emotional-variant-must-use-the-exact-emotional-line-specified-in-req-11",
+      "featureTitle": "Extend the content model to support the new Closing-section personal note pop-up for both content variants (classic and emotional), and render the correct variant-specific pop-up copy based on the existing `?variant=` selection.\n\n- Update `frontend/src/content/roseDayContent.ts` so `closing` includes fields for the pop-up trigger label and the pop-up body text.\n- Provide suitable English copy for both variants; the emotional variant must use the exact emotional line specified in REQ-11.",
+      "files": [
+        "frontend/src/content/roseDayContent.ts",
+        "frontend/src/pages/RoseDayPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

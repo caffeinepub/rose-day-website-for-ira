@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Rose Day Romantic Palette - Light Mode */
+        --background: 0.98 0.01 15;
+        --foreground: 0.25 0.05 15;
+        
+        --card: 0.99 0.01 15;
+        --card-foreground: 0.25 0.05 15;
+        
+        --popover: 0.99 0.01 15;
+        --popover-foreground: 0.25 0.05 15;
+        
+        --primary: 0.55 0.18 15;
+        --primary-foreground: 0.98 0.01 15;
+        
+        --secondary: 0.95 0.02 15;
+        --secondary-foreground: 0.35 0.05 15;
+        
+        --muted: 0.96 0.02 15;
+        --muted-foreground: 0.50 0.04 15;
+        
+        --accent: 0.94 0.03 15;
+        --accent-foreground: 0.30 0.05 15;
+        
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.01 15;
+        
+        --border: 0.90 0.02 15;
+        --input: 0.90 0.02 15;
+        --ring: 0.60 0.15 15;
+        
+        /* Custom Rose Day Colors */
+        --rose-50: 0.98 0.01 15;
+        --rose-100: 0.95 0.02 15;
+        --rose-200: 0.90 0.03 15;
+        --rose-300: 0.80 0.05 15;
+        --rose-400: 0.70 0.10 15;
+        --rose-500: 0.60 0.15 15;
+        --rose-600: 0.50 0.18 15;
+        --rose-700: 0.40 0.15 15;
+        --rose-800: 0.30 0.12 15;
+        --rose-900: 0.25 0.08 15;
+        --rose-950: 0.15 0.05 15;
+        
+        --cream-50: 0.98 0.01 50;
+        --pink-50: 0.97 0.02 350;
+    }
+
+    .dark {
+        --background: 0.15 0.05 15;
+        --foreground: 0.98 0.01 15;
+        
+        --card: 0.20 0.06 15;
+        --card-foreground: 0.98 0.01 15;
+        
+        --popover: 0.18 0.06 15;
+        --popover-foreground: 0.98 0.01 15;
+        
+        --primary: 0.90 0.02 15;
+        --primary-foreground: 0.20 0.06 15;
+        
+        --secondary: 0.25 0.07 15;
+        --secondary-foreground: 0.98 0.01 15;
+        
+        --muted: 0.25 0.07 15;
+        --muted-foreground: 0.70 0.03 15;
+        
+        --accent: 0.30 0.08 15;
+        --accent-foreground: 0.98 0.01 15;
+        
+        --destructive: 0.60 0.20 25;
+        --destructive-foreground: 0.15 0.05 15;
+        
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.50 0.10 15;
+        
+        /* Custom Rose Day Colors - Dark Mode */
+        --rose-50: 0.15 0.05 15;
+        --rose-100: 0.20 0.06 15;
+        --rose-200: 0.25 0.07 15;
+        --rose-300: 0.30 0.08 15;
+        --rose-400: 0.40 0.10 15;
+        --rose-500: 0.50 0.12 15;
+        --rose-600: 0.60 0.15 15;
+        --rose-700: 0.70 0.10 15;
+        --rose-800: 0.80 0.05 15;
+        --rose-900: 0.85 0.03 15;
+        --rose-950: 0.90 0.02 15;
+        
+        --cream-50: 0.20 0.05 50;
+        --pink-50: 0.18 0.06 350;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+    
+    /* Focus visible styles */
+    *:focus-visible {
+        outline: 2px solid oklch(var(--ring));
+        outline-offset: 2px;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: oklch(var(--rose-100));
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: oklch(var(--rose-400));
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: oklch(var(--rose-500));
+    }
+    
+    .dark ::-webkit-scrollbar-track {
+        background: oklch(var(--rose-950));
+    }
+    
+    .dark ::-webkit-scrollbar-thumb {
+        background: oklch(var(--rose-700));
+    }
+    
+    .dark ::-webkit-scrollbar-thumb:hover {
+        background: oklch(var(--rose-600));
+    }
+}
+
+/* Custom utility classes */
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
